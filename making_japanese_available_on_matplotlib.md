@@ -8,12 +8,12 @@ matplotlibのデフォルトフォントが日本語に対応していないた�
 そいつを解決するまでのまとめ。
 <br >
 
-## 試したこと  
+## 経緯  
 [ここ](https://qiita.com/knknkn1162/items/be87cba14e38e2c0f656)と[ここ](http://kaisk.hatenadiary.com/entry/2015/02/15/215831)と[ここ](https://gcbgarden.com/2017/05/04/matplotlib-japanese/)を試した。  
 
-が、結局上手くいかず色々模索することに。
+だが、結局上手くいかず、あれこれ模索をすることに。
 
-結論から書くとボトルネックは「~/.matplotlib/fontList.json」というファイルだった。  
+結論から書くと、ボトルネックは「~/.matplotlib/fontList.json」というファイルだった。  
 名前で詐欺ってるがどうやらこやつもキャッシュのようで毎回読み込まれている模様。  
 (その証拠に問題解決後、新しく作られたファイルをgrepしてやったらちゃっかり「IPAexGothic」の行が追加されていた)  
 <br >
@@ -75,9 +75,11 @@ $ python
 
 
 グラフタイトルがきちんと表示されていればひとまず完了です。  
-お疲れ様でした。<br >
+お疲れ様でした。  
+<br >
 
 ## 留意点  
-matplotlibが更新されるときに「../python[$バージョン]/site-packages/matplotlib/」以下が書き換わり、
-以前の状態に戻ってしまう可能性がある。
+ただ一つ留意しなければならないことが。
+matplotlibが更新されるときに「../python[$バージョン]/site-packages/matplotlib/」以下が書き換わり、  
+以前の状態に戻ってしまう可能性がある。  
 そのときは 「ipaexg.ttf」を再配置すれば直る(はず)。

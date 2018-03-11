@@ -46,8 +46,7 @@ pyenv 1.2.0
 
 2. zipを解凍すると「ipaexg.ttf」というフォントファイルが出現するので、  
  「../python[$バージョン]/site-packages/matplotlib/mpl-data/fonts/ttf」にコピーする。  
-<br >
-  ※「site-packages」より上のパスは使用環境によって異なるため、要注意。  
+  ※「site-packages」より上のパスは使用環境によって異なるため、要注意。    
 
 
 3. ターミナルを立ち上げ、matplotlibの使用ディレクトリへ移動。  

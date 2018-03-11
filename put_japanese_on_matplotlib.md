@@ -1,8 +1,11 @@
 # put japanese on matplotlib  
 matplotlibを日本語対応させます。  
 
-## 経緯  
-pltで日本語入りのグラフを描画したかったのだが、
+## 前提
+matplotlibのデフォルトフォントが日本語に対応していないため、  
+グラフに日本語を書こうとすると「□□□」みたいな感じに文字化けしてしまう。
+
+## 試したこと  
 [ここ](https://qiita.com/knknkn1162/items/be87cba14e38e2c0f656)と[ここ](http://kaisk.hatenadiary.com/entry/2015/02/15/215831)と[ここ](https://gcbgarden.com/2017/05/04/matplotlib-japanese/)を参考にするも一向に□□□状態から抜け出せず。
 
 結論から先に書くと、これらの手順に加えて、  
@@ -17,7 +20,14 @@ ProductVersion: 10.13.3
 BuildVersion:   17D102  
 
 $ python -V  
-Python 3.6.3 :: Anaconda custom (64-bit)   
+Python 3.6.3 :: Anaconda custom (64-bit)
+
+$ brew -v
+Homebrew 1.5.8
+Homebrew/homebrew-core (git revision 695f341; last commit 2018-03-04)
+
+$ pyenv -v
+pyenv 1.2.0  
 ```
 ## 手順  
 1. fontのダウンロード  
@@ -47,5 +57,5 @@ $ python
 >>> plt.show()  
 ```
 
-グラフタイトルが日本語になっていれば完了です。  
+グラフタイトルがきちんと表示されれば完了です。  
 お疲れ様でした。

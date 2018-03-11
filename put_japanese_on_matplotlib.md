@@ -1,12 +1,12 @@
 # put japanese on matplotlib  
 matplotlibを日本語対応させます。  
+<br >
 
-<br>
 ## 前提
 matplotlibのデフォルトフォントが日本語に対応していないため(Macだけの問題?)、  
 グラフに日本語を書こうとすると「□□□」みたいな感じに文字化けしてしまう。
+<br >
 
-<br>
 ## 試したこと  
 [ここ](https://qiita.com/knknkn1162/items/be87cba14e38e2c0f656)と[ここ](http://kaisk.hatenadiary.com/entry/2015/02/15/215831)と[ここ](https://gcbgarden.com/2017/05/04/matplotlib-japanese/)を試した。  
 
@@ -15,8 +15,8 @@ matplotlibのデフォルトフォントが日本語に対応していないた�
 結論から書くと、参照先の手順に加えて、  
 ~/.matplotlib/fontList.json
 を消したら上手くいった。  
+<br >
 
-<br>
 ## 環境  
 ```
 $ sw_vers  
@@ -34,8 +34,8 @@ Homebrew/homebrew-core (git revision 695f341; last commit 2018-03-04)
 $ pyenv -v
 pyenv 1.2.0  
 ```
+<br >
 
-<br>
 ## 手順  
 1. fontのダウンロード  
 [ここ](https://ipafont.ipa.go.jp/node26#jp)から「IPAexゴシック」をダウンロード。  
@@ -71,9 +71,8 @@ $ python
 
 
 グラフタイトルがきちんと表示されていればひとまず完了です。  
-お疲れ様でした。
+お疲れ様でした。<br >
 
-<br>
 ## 留意点  
 matplotlibが更新されるときに「../python[$バージョン]/site-packages/matplotlib/」以下が書き換わり、
 以前の状態に戻ってしまう可能性がある。

@@ -49,7 +49,7 @@ pyenv 1.2.0
  ※「site-packages」より上のパスは使用環境によって異なるため、要確認。    
 
 
-3. ターミナルを立ち上げ、matplotlibの使用ディレクトリへ移動。  
+3. Terminalを立ち上げ、matplotlibの使用ディレクトリへ移動。  
 ```
 $ cd ~/.matplotlib  
 ```

@@ -64,7 +64,7 @@ $ echo 'font.family  : IPAexGothic' > matplotlibrc
 rm -f fontList.json fontList.cache fontList.py3k.cache
 ```
 
-6. 動作確認
+6. 動作確認  
 ```
 $ python  
 
@@ -79,7 +79,7 @@ $ python
 <br >
 
 ## 留意点  
-ただ一つ留意しなければならないことが。
+ただ一つ留意しなければならないことが。  
 matplotlibが更新されるときに「../python[$バージョン]/site-packages/matplotlib/」以下が書き換わり、  
 以前の状態に戻ってしまう可能性がある。  
 そのときは 「ipaexg.ttf」を再配置すれば直る(はず)。

@@ -11,7 +11,8 @@ matplotlibのデフォルトフォントが日本語に対応していないた�
 ## 経緯  
 [ここ](https://qiita.com/knknkn1162/items/be87cba14e38e2c0f656)と[ここ](http://kaisk.hatenadiary.com/entry/2015/02/15/215831)と[ここ](https://gcbgarden.com/2017/05/04/matplotlib-japanese/)を試した。  
 
-だが、結局上手くいかず、あれこれ模索をすることに。
+が、
+結局上手くいかず、あれやこれやと模索をすることに。
 
 結論から書くと、ボトルネックは「~/.matplotlib/fontList.json」というファイルだった。  
 名前で詐欺ってるがどうやらこやつもキャッシュのようで毎回読み込まれている模様。  
